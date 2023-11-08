@@ -1,0 +1,7 @@
+name: "EEB 603"
+output_dir: "."
+navbar:
+  title: "GitHub Tutorial"
+  left:
+    - text: "Home"
+      href: Tutorial_on_GitHub.html
