@@ -1,5 +1,5 @@
 --- 
-title: "EEB 605 Bioinformatics Tutorial"
+title: "EEB 603 Bioinformatics Tutorial"
 subtitle: "Tutorial on GitHub"
 author: "Katherine Kappelman, Mike Kramer-Duffield, and Adedotun Arogundade"
 date: "`r Sys.Date()`"    # Instead of writing date, we use an inline code of R for it to update the code with the system's date each time you knit
@@ -110,7 +110,7 @@ opts_chunk$set(fig.pos = "H")
 
 ### Creating a GitHub Account
 
-First, we need to create a GitHub account. Visit the [GitHub](github.com) page to register with a valid email address and create an account for free.
+First, we need to create a GitHub account. Visit the [GitHub](https://github.com) page to register with a valid email address and create an account for free.
 
 
 ### Install Git and R studio
@@ -936,7 +936,7 @@ $ git clone <URL of your collaborator's repository>
 * Now, move into that folder
 
 ```{r, eval=FALSE}
-$ cd EEB_603_GitHub_Tutorial_Day2.Collaborators.Initials
+$ cd EEB_603_GitHub_Tutorial_Day2.Collaborators.Initials/
 ```
 
 #### Making edits as a collaborator
@@ -1016,7 +1016,7 @@ Now, if you go to your GitHub page, and click on your own repository which is th
 * Move to your own project folder
 
 ```{r, eval=FALSE}
-$ cd /path/to/your/EEB_603_GitHub_Tutorial_Day2.YourInitials
+$ cd /path/to/your/EEB_603_GitHub_Tutorial_Day2.YourInitials/
 ```
 
 * Bring in the changes and test.
@@ -1231,12 +1231,12 @@ ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
 
 #Let's create a new data set that includes all the information of America in gapmider
 
-americas<-gapminder[gapminder$continent=="Americas",]
+americas <- gapminder[gapminder$continent=="Americas",]
 
 #Important notice are the use of double equal to sign. Also, the comma at the end of 'Americas' was added to tell the computer that we need all the columns in the row 'Americas'.
 
 americas
-View(americas)
+head(americas)
 
 #HOW TO MAKE SMALL MULTIPLES OF DATA
 
@@ -1287,7 +1287,7 @@ ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
 #However, before you do that you will have to make the figure into an object that will be saved in the environment.
 #Here I will make it object 'p' in my environment
 
-p<-ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
+p <- ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
   geom_line()+
   facet_wrap(~country)+
   theme(axis.text.x=element_text(angle=45))+
@@ -1310,6 +1310,84 @@ ggsave(filename="./AmericasLifeExp.png",plot=p,width=20,height=15,dpi=300,units=
 ```
 
 
+#### Create a your website yaml file
+
+* Confirm that you are in your own local repository.
+
+```{r, eval=FALSE}
+
+$ pwd
+
+
+```
+
+* If not, move into your local repository
+
+```{r, eval=FALSE}
+
+$ cd /path/to/your/EEB_603_GitHub_Tutorial_Day2.YourInitials/
+
+
+```
+
+* Confirm that you are working from your `main` branch.
+
+```{r, eval=FALSE}
+
+$ git branch
+
+```
+
+
+
+
+
+* Now, use the `nano` command to create the yaml file
+
+```{r, eval=FALSE}
+
+$ nano _site.yml
+
+```
+
+* Copy the code below into the window that appears after running the 'nano' command
+
+```{r, eval=FALSE}
+
+name: "EEB 603 Tutorial"
+output_dir: "."
+navbar:
+  title: "An Example GitHub Webpage - Intro to Plotting"
+  left:
+    - text: "Home"
+      href: index.html
+
+
+```
+
+
+#### Push the newly created file into your remote repository on GitHub
+
+```{r, eval=FALSE}
+
+$ git add --all
+
+
+$ git commit -a -m "Updates"
+
+
+$ git push -u origin main
+
+
+
+```
+
+
+
+#### Set up the website
+
+Follow this [GitHub documentation](https://guides.github.com/features/pages) to publish the website.
+
 
 
 
@@ -1334,7 +1412,6 @@ ggsave(filename="./AmericasLifeExp.png",plot=p,width=20,height=15,dpi=300,units=
 
 
 
-# How to clone a repository from GitHub with *git clone*
 
 
 
