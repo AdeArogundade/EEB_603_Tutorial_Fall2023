@@ -81,8 +81,7 @@ opts_chunk$set(echo = TRUE, warning = TRUE, message = TRUE, include = TRUE)
 ## Code decoration
 opts_chunk$set(tidy = TRUE, tidy.opts = list(blank = FALSE, width.cutoff = 60),
     highlight = TRUE)
-## Caching code
-opts_chunk$set(cache = 2, cache.path = "cache/")
+
 ## Plots The first dev is the master for the output
 ## document
 opts_chunk$set(fig.path = "Figures_MS/", dev = c("png", "pdf"),
