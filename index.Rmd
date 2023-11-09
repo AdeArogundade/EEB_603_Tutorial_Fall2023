@@ -1310,7 +1310,7 @@ ggsave(filename="./AmericasLifeExp.png",plot=p,width=20,height=15,dpi=300,units=
 ```
 
 
-#### Create a your website yaml file
+#### Create a yaml file for your webpage
 
 * Confirm that you are in your own local repository.
 
@@ -1366,7 +1366,10 @@ navbar:
 ```
 
 
-#### Push the newly created file into your remote repository on GitHub
+* Knit the `index.Rmd` file to create **index.html** which is the file that will be published. 
+
+
+#### Push the newly created files into your remote repository on GitHub
 
 ```{r, eval=FALSE}
 
@@ -1388,45 +1391,41 @@ $ git push -u origin main
 
 Follow this [GitHub documentation](https://guides.github.com/features/pages) to publish the website.
 
+* Click on **Settings** 
 
+* Click on **Page** in the **"Code and automation"** section
 
+* Select **"Deploy from a branch"** under **Source**
 
-  
-  
-
-
-
-
-
-
+* Choose the `main` branch as the publishing source.
 
 
 
 
+#### Update your README file
+
+README files are a quick and simple way for other users to learn more about your project. Wikis on GitHub help you present in-depth information about your project in a useful way. Check this [link](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/adding- or-editing-wiki-pages) for more information about wiki.
+
+#### License your work
+
+Licensing your work is very important. Check the class [website](https://svenbuerki.github.io/EEB603_Reproducible_Science/Chapters.html#58_Creative_Common_licences) for more information on license.
 
 
+# Relevant Video Tutorials
 
+```{r, include=TRUE, echo=FALSE, warning=FALSE}
 
+#install.packages("vembedr")
 
+library(vembedr)
 
+embed_url("https://youtu.be/HVsySz-h9r4")
 
+embed_url("https://youtu.be/USjZcfj8yxE")
 
+embed_url("https://youtu.be/RGOj5yH7evk")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```{r, eval=FALSE}
+embed_url("https://youtu.be/kL6L2MNqPHg")
 
 ```
 
@@ -1434,15 +1433,40 @@ Follow this [GitHub documentation](https://guides.github.com/features/pages) to 
 
 
 
-```{r, eval=FALSE}
-
-```
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 
 # References
+
+-->
 
 <div id="refs"></div>
 
