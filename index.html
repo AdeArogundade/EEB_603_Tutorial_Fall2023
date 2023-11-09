@@ -1054,35 +1054,28 @@ $ git merge --no-ff function_collaboratorinitials
 
 $ git push origin main</code></pre>
 <ul>
-<li>Now, if you go to GitHub, you should see that the changes made by your collaborator have now been merged to your main branch. See screenshot below:</li>
+<li>Now, if you go to GitHub, you should see that the changes made by your collaborator have now been merged to your main branch.</li>
 </ul>
 </div>
-<div id="section" class="section level3" number="2.4.4">
-<h3><span class="header-section-number">2.4.4</span> </h3>
-<!--
-## Create an R Markdown document in RStudio 
-
-We now have a local copy of the github repository. Now, let’s add an R Markdown document to the project.
-
-* Click on **File** -- **New File** -- **R markdown**.
-
-* Save the the file into your Repository folder: Click on **File** -- **Save as**
-
-* Edit the **"Untitled.Rmd"** to **"Functions_YOURINITIAL.Rmd"**. *For example, "**Functions_AA.Rmd**"*
-
-* Open the Markdown document
-
-* Press Ctrl + A or Command + A to highlight and delete everything in the file.
-
-* Copy the YAML code below into the markdown document
-
-
-```r
---- 
-title: "EEB 603 Bioinformatics Tutorial"
-subtitle: "Tutorial on GitHub"
-author: "Your Full Name"
-date: "`r Sys.Date()`"    # Instead of writing the date, we use an inline code of R for it to update the code with the system's date each time you knit
+<div id="commiting-your-document-as-a-github-page" class="section level3" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Commiting your document as a GitHub Page</h3>
+<p>GitHub Pages are public webpages hosted and easily published through GitHub. Check <a href="https://guides.github.com/features/pages">this documentation</a> for details.</p>
+<p>For this tutorial, we will create an example page that we will publish to the web.</p>
+<div id="create-an-r-markdown-document-and-name-it-index.rmd" class="section level4" number="2.4.4.1">
+<h4><span class="header-section-number">2.4.4.1</span> Create an R Markdown document and name it <em>index.Rmd</em></h4>
+<ul>
+<li><p>Click on <strong>File</strong> – <strong>New File</strong> – <strong>R markdown</strong>.</p></li>
+<li><p>Save the the file into your Repository folder: Click on <strong>File</strong> – <strong>Save as</strong></p></li>
+<li><p>Edit the <strong>“Untitled.Rmd”</strong> to <strong>“index.Rmd”</strong>.</p></li>
+<li><p>Open the Markdown document</p></li>
+<li><p>Press Ctrl + A or Command + A to highlight and delete everything in the file.</p></li>
+<li><p>Copy the YAML code below into the markdown document</p></li>
+</ul>
+<pre class="r"><code>--- 
+title: &quot;EEB 603 Bioinformatics Tutorial&quot;
+subtitle: &quot;An Example GitHub Webpage - Intro to Plotting&quot;
+author: &quot;Your Full Name&quot;
+date: &quot;`r Sys.Date()`&quot;    # Instead of writing the date, we use an inline code of R for it to update the code with the system&#39;s date each time you knit
 output:
   bookdown::html_document2:   #We specified that we want to use the html_document2 function from bookdown to avoid any ambiguity
     toc: TRUE
@@ -1090,25 +1083,208 @@ output:
   #  toc: TRUE
 link-citations: yes   # This function is used to link your in-text citations so that when clicked it will redirect readers to the full-text references
 fontsize: 12pt
-#bibliography: Bibliography_Reproducible_Science_2.bib  
-#csl: AmJBot.csl
----
-```
+
+---</code></pre>
+</div>
+<div id="insert-a-code-chunk" class="section level4" number="2.4.4.2">
+<h4><span class="header-section-number">2.4.4.2</span> Insert a code chunk</h4>
+<ul>
+<li><p>Use the <code>insert</code> button <img src="Figures/Insert_Code_Chunck.png" /> in R studio</p></li>
+<li><p>Use a keyboard shortcut</p>
+<ul>
+<li><p><strong>On Mac: Cmd + Option + I</strong></p></li>
+<li><p><strong>On PC : Ctrl + Alt + I</strong></p></li>
+</ul></li>
+</ul>
+</div>
+<div id="copy-the-code-below-into-the-code-chunk" class="section level4" number="2.4.4.3">
+<h4><span class="header-section-number">2.4.4.3</span> Copy the code below into the code chunk</h4>
+<pre class="r"><code>## Load the packages
+
+#install.packages(&quot;gapminder&quot;)
+
+library(gapminder)
+head(gapminder)
 
 
-### Insert a code chunk
+#Base plot
 
-  - Use the `insert` button ![](Figures/Insert_Code_Chunck.png) in R studio
 
-  - Use a keyboard shortcut 
-      
-      + **On Mac: Cmd + Option + I**
-      
-      + **On PC : Ctrl + Alt + I**
-      
-### Copy the code below into the code chunk
+plot(x=gapminder$gdpPercap,y=gapminder$lifeExp)
 
--->
+
+#The default graph is scatter plot. However, you can specify your choice of graph using an argument code
+
+plot(x=gapminder$gdpPercap,y=gapminder$lifeExp, type=&quot;line&quot;)
+
+#the code above will produce a line graph.
+
+
+#You can also use a boxplot to plot your data.
+
+boxplot(gapminder$lifeExp ~ gapminder$continent)
+
+#The syntax &quot;~&quot; above is used for several things. In the code above it reads &quot;Life expentancy &#39;as determined&#39; by Continent&quot;
+
+#It is important to also know that box plot work when one of the data type is a categorical data
+
+#We can also make histogram, which is used to see the distribution of a data
+
+hist(gapminder$lifeExp,col=&quot;pink&quot;)
+
+#Notice in the code above that there is an argument &quot;col&quot; which helps to add color to the graph.
+
+
+
+#GGPLOT is much cleaner and better to create graphs for publications
+
+#install.packages(&quot;ggplot&quot;)
+library(ggplot2)
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))
+
+#The argument &#39;mapping&#39; helps to create a template where our data will be plotted
+#Notice that, the &#39;$&#39; is not used to call out the data in a dataset, this is because of the &#39;aes&#39; which tell the computer to look for the vectors inside the data &#39;gapminder&#39; that was written before it.
+
+#The code above doesn&#39;t include any graph, it sets the stage for the graphs. &#39;gg&#39; in &#39;ggplot&#39; stands for &#39;grammar of graphics&#39;.
+#In order to continue to use the &#39;template&#39; we add a &#39;+&#39; sign after the code. This tells the computer that everything that will come after should be on it.
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
+  geom_point()
+
+#geom_points() helps to add scatter plot
+#geom_line helps to add line graphs
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
+  geom_line()
+
+
+#To determine how something has changed overtime
+
+ggplot(data=gapminder,mapping=aes(x=year,y=lifeExp))+
+  geom_line()
+
+#Change overtime by country will include an additional argument
+
+ggplot(data=gapminder,mapping=aes(x=year,y=lifeExp,by=country))+
+  geom_line()
+
+#You can add color by country, by using the function &#39;color=&#39;
+
+ggplot(data=gapminder,mapping=aes(x=year,y=lifeExp,by=country,color=continent))+
+  geom_line()
+
+
+
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
+  geom_point()
+
+#We can rescale our x-axis for. This is helpful if you want to see your points more clearly
+
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
+  geom_point()+scale_x_log10()
+
+#Now our data is more dispersed because we have enlarged the scale.
+
+#We can also change the transparency which is known as the alpha value
+
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
+  geom_point(alpha=0.5)+scale_x_log10()
+
+#When you run the code above, you will notice that the plot are more transparent and you can see more data clearly
+
+#How TO ADD A SMOOTH FIT OR BEST FIT LINE ACROSS A GRAPH i.e a line that is closes to all the data
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
+  geom_point(alpha=0.5)+scale_x_log10()+
+  geom_smooth(method=&quot;lm&quot;)
+
+#In the code above, we added, a linear model line into the graph
+
+#We can change the color and size of the line.
+
+ggplot(data=gapminder,mapping=aes(x=gdpPercap,y=lifeExp))+
+  geom_point(alpha=0.5)+scale_x_log10()+
+  geom_smooth(method=&quot;lm&quot;,color=&quot;red&quot;,size=3)
+
+
+#HOW TO CREATE A SUBSET FROM A DATA E.G GAPMINDER
+
+#Let&#39;s create a new data set that includes all the information of America in gapmider
+
+americas&lt;-gapminder[gapminder$continent==&quot;Americas&quot;,]
+
+#Important notice are the use of double equal to sign. Also, the comma at the end of &#39;Americas&#39; was added to tell the computer that we need all the columns in the row &#39;Americas&#39;.
+
+americas
+View(americas)
+
+#HOW TO MAKE SMALL MULTIPLES OF DATA
+
+#Using the subset &#39;americas&#39;
+
+ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
+  geom_line()+
+  facet_wrap(~country)
+
+#You can see that we have created a subset of life expectancy against year in countries in america.
+#One thing we should note is that text of the years on x axis and the values on y axis are not that clear. We can remedy this using the function &#39;theme&#39;
+
+
+ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
+  geom_line()+
+  facet_wrap(~country)+
+  theme(axis.text.x=element_text(angle=45))
+
+#Now the years are not overlapping with each other.
+
+
+#Also, the X and Y axis can be renamed on the graph using &#39;xlab&#39; and &#39;ylab&#39; functions.
+
+ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
+  geom_line()+
+  facet_wrap(~country)+
+  theme(axis.text.x=element_text(angle=45))+
+  xlab(&quot;Year&quot;)
+
+#Observe that the X-axis has been change from &#39;year&#39; to &#39;Year&#39;
+
+
+ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
+  geom_line()+
+  facet_wrap(~country)+
+  theme(axis.text.x=element_text(angle=45))+
+  xlab(&quot;Year&quot;)+
+  ylab(&quot;LifeExpectancy&quot;)
+
+#Also the y axis has been change from &#39;lifeExp&#39; to &#39;LifeExpectancy&#39;
+
+
+
+
+#HOW TO SAVE A FIGURE
+
+#You save a figure using the &#39;ggsave&#39; function. 
+#However, before you do that you will have to make the figure into an object that will be saved in the environment.
+#Here I will make it object &#39;p&#39; in my environment
+
+p&lt;-ggplot(data=americas,mapping=aes(x=year,y=lifeExp))+
+  geom_line()+
+  facet_wrap(~country)+
+  theme(axis.text.x=element_text(angle=45))+
+  xlab(&quot;Year&quot;)+
+  ylab(&quot;LifeExpectancy&quot;)
+
+#Now I can save it.
+
+ggsave(filename=&quot;./AmericasLifeExp.png&quot;,plot=p,width=20,height=15,dpi=300,units=&quot;cm&quot;)
+
+#Now, it is saved in your project directory.
+#The ggsave function will help you meet the specific journal requirements for each publication.</code></pre>
+</div>
 </div>
 </div>
 </div>
