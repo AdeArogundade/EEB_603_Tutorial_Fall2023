@@ -1741,7 +1741,11 @@ $ head README.md</code></pre>
 <div id="commit-the-changes-to-the-repository" class="section level3" number="1.6.3">
 <h3><span class="header-section-number">1.6.3</span> Commit the changes to the Repository</h3>
 <p>In order for Git to track changes, we have to commit changes to the repository. The Git command used for committing changes is <code>git commit</code>.</p>
-<pre class="r"><code>$ git commit -a -m &quot;First Edits to README.md&quot;
+<pre class="r"><code># Prepare all of your files to be added to GitHub
+
+$ git add --all 
+
+$ git commit -a -m &quot;First Edits to README.md&quot;
 
 Note: 
   -a symbolizes that you want to commit the changes from all the files in your repository.

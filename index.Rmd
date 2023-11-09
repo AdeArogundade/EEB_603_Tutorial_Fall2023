@@ -443,9 +443,13 @@ $ head README.md
 
 ### Commit the changes to the Repository
 
+
 In order for Git to track changes, we have to commit changes to the repository. The Git command used for committing changes is `git commit`.
 
 ```{r, eval=FALSE}
+# Prepare all of your files to be added to GitHub
+
+$ git add --all 
 
 $ git commit -a -m "First Edits to README.md"
 
