@@ -1065,7 +1065,7 @@ $ git push origin main</code></pre>
 <div id="create-an-r-markdown-document-and-name-it-index.rmd" class="section level4" number="2.4.4.1">
 <h4><span class="header-section-number">2.4.4.1</span> Create an R Markdown document and name it <em>index.Rmd</em></h4>
 <ul>
-<li><p>Click on <strong>File</strong> – <strong>New File</strong> – <strong>R markdown</strong>.</p></li>
+<li><p>Click on <strong>File</strong> –&gt; <strong>New File</strong> –&gt; <strong>R markdown</strong>.</p></li>
 <li><p>Save the the file into your Repository folder: Click on <strong>File</strong> – <strong>Save as</strong></p></li>
 <li><p>Edit the <strong>“Untitled.Rmd”</strong> to <strong>“index.Rmd”</strong>.</p></li>
 <li><p>Open the Markdown document</p></li>
@@ -1084,7 +1084,6 @@ output:
   #  toc: TRUE
 link-citations: yes   # This function is used to link your in-text citations so that when clicked it will redirect readers to the full-text references
 fontsize: 12pt
-
 ---</code></pre>
 </div>
 <div id="insert-a-code-chunk" class="section level4" number="2.4.4.2">
@@ -1100,6 +1099,7 @@ fontsize: 12pt
 </div>
 <div id="copy-the-code-below-into-the-code-chunk" class="section level4" number="2.4.4.3">
 <h4><span class="header-section-number">2.4.4.3</span> Copy the code below into the code chunk</h4>
+<p>We are using the <em>gapminder</em> data in the <strong>gapminder R package.</strong> Type <code>??gapminder</code> in the R Console for more information.</p>
 <pre class="r"><code>## Load the packages
 
 #install.packages(&quot;gapminder&quot;)
@@ -1286,8 +1286,8 @@ ggsave(filename=&quot;./AmericasLifeExp.png&quot;,plot=p,width=20,height=15,dpi=
 #Now, it is saved in your project directory.
 #The ggsave function will help you meet the specific journal requirements for each publication.</code></pre>
 </div>
-<div id="create-a-yaml-file-for-your-webpage" class="section level4" number="2.4.4.4">
-<h4><span class="header-section-number">2.4.4.4</span> Create a yaml file for your webpage</h4>
+<div id="create-a-yml-file-for-your-webpage" class="section level4" number="2.4.4.4">
+<h4><span class="header-section-number">2.4.4.4</span> Create a yml file for your webpage</h4>
 <ul>
 <li>Confirm that you are in your own local repository.</li>
 </ul>
@@ -1315,7 +1315,7 @@ navbar:
     - text: &quot;Home&quot;
       href: index.html</code></pre>
 <ul>
-<li>Knit the <code>index.Rmd</code> file to create <strong>index.html</strong> which is the file that will be published.</li>
+<li><strong>Knit the <code>index.Rmd</code> file to create <em>index.html</em> which is the file that will be published.</strong></li>
 </ul>
 </div>
 <div id="push-the-newly-created-files-into-your-remote-repository-on-github" class="section level4" number="2.4.4.5">

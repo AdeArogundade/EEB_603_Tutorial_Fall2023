@@ -1065,7 +1065,7 @@ For this tutorial, we will create an example page that we will publish to the we
 
 #### Create an R Markdown document and name it *index.Rmd*
 
-* Click on **File** -- **New File** -- **R markdown**.
+* Click on **File** --> **New File** --> **R markdown**.
 
 * Save the the file into your Repository folder: Click on **File** -- **Save as**
 
@@ -1092,7 +1092,6 @@ output:
   #  toc: TRUE
 link-citations: yes   # This function is used to link your in-text citations so that when clicked it will redirect readers to the full-text references
 fontsize: 12pt
-
 ---
 
 
@@ -1112,6 +1111,8 @@ fontsize: 12pt
       + **On PC : Ctrl + Alt + I**
       
 #### Copy the code below into the code chunk
+
+We are using the *gapminder* data in the **gapminder R package.** Type `??gapminder` in the R Console for more information.
 
 ```{r, eval=FALSE}
 
@@ -1310,7 +1311,7 @@ ggsave(filename="./AmericasLifeExp.png",plot=p,width=20,height=15,dpi=300,units=
 ```
 
 
-#### Create a yaml file for your webpage
+#### Create a yml file for your webpage
 
 * Confirm that you are in your own local repository.
 
@@ -1366,7 +1367,7 @@ navbar:
 ```
 
 
-* Knit the `index.Rmd` file to create **index.html** which is the file that will be published. 
+* **Knit the `index.Rmd` file to create *index.html* which is the file that will be published.**
 
 
 #### Push the newly created files into your remote repository on GitHub
