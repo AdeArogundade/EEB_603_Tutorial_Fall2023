@@ -991,7 +991,7 @@ square_number <- function(base){
 
 ```
 
-* Save the changes you made by typing `Ctrl/Command + X`
+* Save the changes you made by typing `Ctrl/Command + S`
 
 * Go to R Terminal and commit your changes, and then upload to GitHub using this command:
 
