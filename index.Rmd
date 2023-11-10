@@ -198,7 +198,7 @@ For this tutorial, we will be using the second method.
 * Select Initialize this repository with a README. README is a file that contains the full description of the project.
 
 * Click Create repository.
-```{r, echo=FALSE, fig.align="center", fig.cap="Create new repository on GitHub", out.width = '60%'}
+```{r, echo=FALSE, fig.align="center", fig.cap="Create new repository on GitHub", out.width = '100%', out.height='100%'}
 knitr::include_graphics("Figures/Create_new_repository.png")
 ```
 
@@ -221,14 +221,14 @@ Branching is a way to work on different versions of a repository at one time. Wh
 
 * Choose the newly created branch `Branch_1` and move into it.
 
-```{r, echo=FALSE, fig.align="center", fig.cap="Navigate to Branch on Github website", out.width = '60%'}
+```{r, echo=FALSE, fig.align="center", fig.cap="Navigate to Branch on Github website", out.width = '100%', out.height='100%'}
 knitr::include_graphics("Figures/Navigate_to_Branch_on_Github_website.png")
 ```
 
 
 * Select the file that you want to edit. In the image below, we are choosing the README file.
 
-```{r, echo=FALSE, fig.align="center", fig.cap="Editing a file in Branch", out.width = '60%'}
+```{r, echo=FALSE, fig.align="center", fig.cap="Editing a file in Branch", out.width = '100%', out.height='100%'}
 knitr::include_graphics("Figures/Edit_a_file_in_branch.png")
 ```
 
@@ -818,7 +818,7 @@ Follow the steps described in [Create a remote repository on GitHub](#Create_rep
 * Select Initialize this repository with a README. README is a file that contains the full description of the project.
 
 * Click Create repository.
-```{r, echo=FALSE, fig.align="center", fig.cap="Create new repository on GitHub", out.width = '60%'}
+```{r, echo=FALSE, fig.align="center", fig.cap="Create new repository on GitHub", out.width = '100%', out.height='100%'}
 knitr::include_graphics("Figures/Create_new_repository.png")
 ```
 
@@ -888,7 +888,7 @@ The first step is to give access to your collaborators using either their GitHub
 
 * The collaborator will be nudged via email; once the collaborator accepts your invite to collaborate on the repository, you can now collaborate on the repository/project.
 
-```{r, echo=FALSE, fig.align="center", fig.cap="How to Grant Collaborators Access to your Repository", out.width=  '60%'}
+```{r, echo=FALSE, fig.align="center", fig.cap="How to Grant Collaborators Access to your Repository", out.width=  '100%', out.height= '100%'}
 knitr::include_graphics("Figures/Grant_Access_to_Collaborators.png")
 ```
 
