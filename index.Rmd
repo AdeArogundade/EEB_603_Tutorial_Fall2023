@@ -893,7 +893,7 @@ knitr::include_graphics("Figures/Grant_Access_to_Collaborators.png")
 ```
 
 
-* For Fall 2023 EEB 603 students, we have assigned everyone a collaborator, so check this [Google Document](paste the URL of the document here once you create it) that is saved in our shared Drive to get the information of your collaborator. 
+* For Fall 2023 EEB 603 students, we have assigned everyone a collaborator, so check this [Google Document](https://docs.google.com/spreadsheets/d/1gUwbqJ4gbhhSY1DfsZ7HsoDLzOKB-57xAAC1_IJ3qmk/edit#gid=0) that is saved in our shared Drive to get the information of your collaborator. 
 
 
 ### How to make changes as a collaborator
