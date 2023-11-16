@@ -1401,6 +1401,8 @@ Follow this [GitHub documentation](https://guides.github.com/features/pages) to 
 
 * Choose the `main` branch as the publishing source.
 
+* Save your options and check your website at `https://GitHubUserName.github.io/EEB_603_GitHub_Tutorial_Day2.YourInitials/`
+
 
 
 
