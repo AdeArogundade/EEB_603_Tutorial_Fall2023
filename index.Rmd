@@ -16,6 +16,7 @@ bibliography: Bibliography_Reproducible_Science_2.bib
 csl: AmJBot.csl
 ---
 
+<div style="text-align: right"> [Download pdf of Intro. to Cloud Storage](Data/Intro_to_Cloud_Storage.pdf) </div>
 
 <!-- LOAD PACKAGES -->
 
