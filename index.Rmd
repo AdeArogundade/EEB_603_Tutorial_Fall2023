@@ -17,6 +17,7 @@ csl: AmJBot.csl
 ---
 
 <div style="text-align: right"> [Download pdf of Intro. to Cloud Storage](Data/Intro_to_Cloud_Storage.pdf) </div>
+<div style="text-align: right"> [Raw data on GitHub](https://github.com/AdeArogundade/EEB_603_Tutorial_Fall2023) </div>
 
 <!-- LOAD PACKAGES -->
 
@@ -129,6 +130,52 @@ Finally, you will need to install Visual Studio Code on your personal computers 
 
 ## GitHub Terminologies {#GitHub_Terminologies}
 
+```{r SearchTablePackages, echo=FALSE, warning=FALSE, include=FALSE}
+
+library(knitr)
+library(rmarkdown)
+library(bookdown)
+#library(distill)
+library(knitcitations)
+library(formatR)
+library(devtools)
+library(kfigr)
+library(dplyr)
+library(kableExtra)
+library(DT)
+
+```
+
+
+```{r Git.Lexicon, eval = T, echo=F, warning = FALSE, message=FALSE}
+###~~~
+#Read in csv with lexicon
+###~~~
+lex <- read.csv("Data/Lexicon.csv") 
+
+###~~~
+#Produce final table
+###~~~
+
+#Order table (alphabetically)
+lex <- lex[order(lex$Term),]
+rownames(lex) <- NULL
+###~~~
+#Plot timetable in doc
+###~~~
+#Plot table
+DT::datatable(lex, extensions = 'Buttons', options = list(dom = 'Blfrtip', buttons = c('copy', 'csv', 'excel', 'pdf', 'print')), rownames= FALSE) %>%
+  DT::formatStyle('Term', fontWeight = 'bold')
+
+#knitr::kable(as.data.frame(lex), caption = "Lexicon of terms used in this course.") %>%
+#  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+``` 
+
+
+
+<!--
+
 Understanding GitHub terminology can make the GitHub experience easier and more meaningful. Here are some terms that you will come across during this tutorial. Click [here](https://docs.github.com/en/get-started/quickstart/github-glossary) for a complete glossary of github terminologies.
 
 * **Branch :** A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.
@@ -176,6 +223,7 @@ Understanding GitHub terminology can make the GitHub experience easier and more 
 
 * **SSH Key :** SSH keys are a way to identify yourself to an online server, using an encrypted message. It's as if your computer has its own unique password to another service. GitHub uses SSH keys to securely transfer information to your computer.
 
+-->
 
 
 ## Create a remote repository on GitHub {#Create_repository_on_GitHub}
