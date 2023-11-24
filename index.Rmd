@@ -1410,7 +1410,7 @@ README files are a quick and simple way for other users to learn more about your
 
 #### License your work
 
-Licensing your work is very important. Check the class [website](https://svenbuerki.github.io/EEB603_Reproducible_Science/Chapters.html#58_Creative_Common_licences) for more information on license.
+Licensing your work is very important. Check the class [website](https://svenbuerki.github.io/EEB603_Reproducible_Science/Chapters.html#58_Creative_Common_licences) for more information on license. You can also check this [GitHub page](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
 
 # Relevant Video Tutorials
