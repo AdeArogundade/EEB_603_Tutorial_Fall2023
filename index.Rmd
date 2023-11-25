@@ -420,6 +420,8 @@ $ nano README.md
 
 * Copy the text below into the mini window that appears after running the `nano README.md`command.
 
+  **Note: You cannot use the mouse to position your cursor in a terminal text edit. Rather, use the arrow/direction keys to navigate.**
+
 ```{r, eval=FALSE}
 
 Bioinformatic Tutorial on how to use GitHub for Reproducible Science.
