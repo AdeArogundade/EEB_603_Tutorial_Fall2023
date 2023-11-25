@@ -279,7 +279,11 @@ Set up your username and user email in Git. Note that your user name will be att
 
 In the Terminal tab in R studio, type the following commands. Ensure that you edit the **"Your name here"** and **"your_email@example.com"** (This is the email you used for your GitHub account") in the codes. Click this [link](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) for more details.
 
-**Note: You do not need to include the $ sign in your code. It just indicates that you are running this code in the Terminal**
+**Note:** 
+
+  **- To operate GitBash, we are going to be working in the "Terminal" tab in R studio and not the "Console" **
+  
+  **- You do not need to include the $ sign in your code. It just indicates that you are running this code in the "Terminal"**
 
 ```{r eval= FALSE}
 
@@ -298,7 +302,7 @@ $ git config --global user.email "adedotun.aro@gmail.com"
 
 Now let's configure our Git editor. This is also referred to as a Git client. A Git editor is an integrated development environment. It makes Git more user friendly and gives it a more informative visual representation. 
 
-There are other Git clients to choose from, click [here]() to explore other clients. For this tutorial, let's use Visual Studio Code as our Git editor.
+There are other Git clients to choose from, click [here](https://git-scm.com/downloads/guis) to explore other clients. For this tutorial, let's use Visual Studio Code as our Git editor.
 
 ```{r, eval=FALSE}
 
@@ -956,7 +960,7 @@ $ git branch -a
 $ git checkout -b function_yourinitials
 
 Note:
-  This command creates a new branch and changes to the new branch automatically. This is a slightly different from the way we created a branch on Day of this tutorial.
+  This command creates a new branch and changes to the new branch automatically. This is slightly different from the way we created a branch on Day 1 of this tutorial.
   
   Now if you type `git branch` into the terminal, you see that you are no longer on the main or master, you are now on the branch you created
 
@@ -974,7 +978,7 @@ $ code .
 
 * Click on the **"Square.Function_CollaboratorInitial.R"* script that you want to edit.
 
-* Notice that this script does not contain a return code which is very important for a function because we would not get any output it. 
+* Notice that this script does not contain a return code which is very important for a function because we would not get any output from it. 
 
 * Therefore, add `#Return sq object /n return(sq)` to the script so that the edited script will look like this.
 
@@ -1009,7 +1013,7 @@ $ git push --set-upstream origin function_yourinitials
 
 ### Reviewing and Accepting Changes made by your collaborators
 
-Now, if you go to your GitHub page, and click on your own repository which is the the repository name with yourinitials (**EEB_603_GitHub_Tutorial_Day2.YourInitials**), you can now see that the branch created by your collaborator (**function_collaboratorinitials**) has been added.
+Now, if you go to your GitHub page, and click on your own repository which is the repository name with yourinitials (**EEB_603_GitHub_Tutorial_Day2.YourInitials**), you can now see that the branch created by your collaborator (**function_collaboratorinitials**) has been added.
 
 
 * Move to your own project folder
@@ -1062,7 +1066,7 @@ GitHub Pages are public webpages hosted and easily published through GitHub. Che
 For this tutorial, we will create an example page that we will publish to the web.
 
 
-#### Create an R Markdown document and name it *index.Rmd*
+#### Create a R Markdown document and name it *index.Rmd*
 
 * Click on **File** --> **New File** --> **R markdown**.
 
@@ -1342,7 +1346,10 @@ $ git branch
 
 
 
-* Now, use the `nano` command to create the yaml file
+* Now, use the `nano` command to create the website yaml file
+
+Visit this [link](https://ymlthis.r-lib.org/reference/yml_site_opts.html) to learn more about the YAML file.
+
 
 ```{r, eval=FALSE}
 
@@ -1406,7 +1413,7 @@ Follow this [GitHub documentation](https://guides.github.com/features/pages) to 
 
 #### Update your README file
 
-README files are a quick and simple way for other users to learn more about your project. Wikis on GitHub help you present in-depth information about your project in a useful way. Check this [link](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/adding- or-editing-wiki-pages) for more information about wiki.
+README files are a quick and simple way for other users to learn more about your project. Wikis on GitHub help you present in-depth information about your project in a useful way. Check this [link](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis) for more information about README and wiki.
 
 #### License your work
 
