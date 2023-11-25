@@ -422,7 +422,6 @@ $ nano README.md
 
 ```{r, eval=FALSE}
 
-# EEB_603_Tutorial_Fall2023
 Bioinformatic Tutorial on how to use GitHub for Reproducible Science.
 
 ```
@@ -526,7 +525,7 @@ $ nano README.md
 * Add your full name to the window that pops up to have something like this 
 
 ```{r, eval=FALSE}
-# EEB_603_Tutorial_Day1
+# EEB_603_GitHub_Tutorial_Day1
 Bioinformatic Tutorial on how to use GitHub for Reproducible Science by Adedotun
 Arogundade.
 ```
