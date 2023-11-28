@@ -1,4 +1,5 @@
 # EEB_603_Tutorial_Fall2023
+
 Bioinformatic Tutorial on how to use GitHub for Reproducible Science by Adedotun Arogundade.
 
 
@@ -15,3 +16,5 @@ AmJBot.csl: The citation format of the American Journal of Botany
 index.Rmd: Rmarkdown document that contains the codes for the "Home" page of the website
 
 index.html: HTML rendered output of index.Rmd
+
+website URL: https://adearogundade.github.io/EEB_603_Tutorial_Fall2023
