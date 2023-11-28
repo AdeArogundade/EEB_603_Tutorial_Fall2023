@@ -16,7 +16,6 @@ bibliography: Bibliography_Reproducible_Science_2.bib
 csl: AmJBot.csl
 ---
 
-<meta name="google-site-verification" content="AZh9vXBUCP153GikgV97XP6T2twM2P-5-BJaTU9uAjA" />
 
 <div style="text-align: right"> [Download pdf of Intro. to Cloud Storage](Data/Intro_to_Cloud_Storage.pdf) </div>
 <div style="text-align: right"> [Raw data on GitHub](https://github.com/AdeArogundade/EEB_603_Tutorial_Fall2023) </div>
