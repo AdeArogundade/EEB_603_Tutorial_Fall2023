@@ -75,7 +75,7 @@ library("bookdown")
 
 # Set your working directory
 
-setwd("~/EEB_603_Tutorial_Fall2023")
+setwd("~/Documents/EEB_603_Tutorial_Fall2023_2")
 
 # Chunk options: see http://yihui.name/knitr/options/ ###
 ## Text results
@@ -115,7 +115,7 @@ opts_chunk$set(fig.pos = "H")
 First, we need to create a GitHub account. Visit the [GitHub](https://github.com) page to register with a valid email address and create an account for free.
 
 
-### Install Git and R studio
+### Install Git and R studio {#Install_Git_and_R_Studio}
 
 Download and install [Git](https://git-scm.com/downloads) on your local computer. If you do not already have R studio, download R and R studio using this [link](https://www.rstudio.com/products/rstudio/download/).
 
@@ -329,7 +329,20 @@ user.email=adedotun.aro@gmail.com
 core.editor=Visual Studio Code
 ```
 
+### Install Git Credentials Manager (Only for Mac Users)
 
+Mac User need to install a credential manager that helps stores and authenticate your git credentials and passwords. 
+
+For PC or Windows users, this manager is installed alongside your Git software installation that was done in this [section](#Install_Git_and_R_Studio).
+
+```{r, eval=FALSE}
+
+$ brew install --cask git-credential-manager
+
+
+```
+
+You can check this [link](https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md) for other installation options if `Homebrew` installation doesn't work for you.
 
 ### Help Command in Git
 
