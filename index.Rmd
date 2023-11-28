@@ -342,7 +342,7 @@ $ git config --help
 
 #### Common Linux/BASH Commands
 
-This lists were adapted from Sven Buerki's tutorial [page](https://svenbuerki.github.io/Genomics-Bioinformatics/Tutorials.html#5_Linux_Commands_Cheat_Sheet)
+This list was adapted from Sven Buerki's tutorial [page](https://svenbuerki.github.io/Genomics-Bioinformatics/Tutorials.html#5_Linux_Commands_Cheat_Sheet)
 
 * `ls` — list items in current directory.
 
