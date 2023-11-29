@@ -1035,6 +1035,8 @@ Now, if you go to your GitHub page, and click on your own repository which is th
 
 ```{r, eval=FALSE}
 $ cd /path/to/your/EEB_603_GitHub_Tutorial_Day2.YourInitials/
+  
+  Note: Make sure to edit the path in this code to your own.
 ```
 
 * Bring in the changes and test.
@@ -1372,9 +1374,11 @@ $ nano _site.yml
 
 ```
 
-* Copy the code below into the window that appears after running the 'nano' command
+* Copy the code below **(without the - - - syntax)** into the window that appears after running the 'nano' command
+
 
 ```{r, eval=FALSE}
+---
 
 name: "EEB 603 Tutorial"
 output_dir: "."
@@ -1384,6 +1388,8 @@ navbar:
     - text: "Home"
       href: index.html
 
+      
+---
 
 ```
 
