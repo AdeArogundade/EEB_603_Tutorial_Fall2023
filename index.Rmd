@@ -1460,7 +1460,23 @@ embed_url("https://youtu.be/kL6L2MNqPHg")
 ```
 
 
+# Other Relevant Resource
 
+It is common for a GitHub hosted website to be flagged by Google as "phishing and deceptive sites". If this happens to your website, you can fix using the following steps.
+
+1. Visit [Google Search Console](http://search.google.com/search-console/)
+
+2. Add your website URL into the domain area
+
+3. Register and verify your website using one of the options that you prefer. Personally, I prefer the option of `HTML file`.
+
+4. Download the `HTML file` and upload it into your GitHub repository.
+
+5. Wait for few hours to a day for confirmation and the website should be back on. 
+
+6. If not, go to the `Overview` tab on Google Search Console of your website, and if you see a message that states that your site has been blocked due to suspected copying.
+
+7. Go to the comment and select the option to send an email to Google and request the removal of the block and explain in the email/message that you website is for educational purposes only. You should receive an email from Google after a few days that restriction/ban has been removed.
 
 
 
